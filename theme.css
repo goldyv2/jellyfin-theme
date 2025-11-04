@@ -67,7 +67,7 @@
     opacity: 1;
   }
   .layout-desktop .detailPageWrapperContainer {
-    margin-top: -89vh;
+    margin-top: -80vh;
     /* inicial: 73 */
   }
 
@@ -91,6 +91,7 @@
 
   .layout-desktop .detailPagePrimaryContent {
     width: 45%;
+	display: inherit;
   }
 
   .layout-desktop .detailPagePrimaryContainer {
@@ -238,7 +239,7 @@
   }
   /* resizes title box to encompass logo to "turn it into a link" */
   .layout-desktop .itemName.parentNameLast {
-    height: 7em;
+    height: 7em;e
   }
   .layout-desktop h1.parentName {
     margin: 1em 0px 0em !important;
@@ -1497,6 +1498,7 @@
   /*Colors for Title ribbon */
   .layout-desktop .detailRibbon {
       background: rgba(0, 0, 0, 0);
+	  display: inherit;
   }
   /* Item backdrop overlay color */
   .itemBackdrop::after {
@@ -1975,6 +1977,10 @@
   }
   #loginPage form {
       padding-top: 4em;
+  }
+  /* Fix for LogIn Box greeting */
+  #loginPage .visualLoginForm h1 {
+	    padding-top: 3em;
   }
 
   #loginPage .sectionTitle{
@@ -3200,6 +3206,15 @@
 	  background-position: 70%;
   }
 
+  /* Limits the number of displayed posters in Genres tab to fit in one row */
+  .layout-desktop {
+    @media (max-width: 43.75em) { #genresTab .card:nth-child(n+4) { display: none } }
+    @media (max-width: 50em) { #genresTab .card:nth-child(n+5) { display: none } }
+    @media (max-width: 75em) { #genresTab .card:nth-child(n+6) { display: none } }
+    @media (max-width: 87.5em) { #genresTab .card:nth-child(n+7) { display: none } }
+    @media (min-width: 87.5em) { #genresTab .card:nth-child(n+8) { display: none } }
+  }
+
 
   /* --- ### PLUGINS ### --- */
 
@@ -4007,4 +4022,3 @@
   font-size: 1.75em;
   font-weight: 600;
 }
-
