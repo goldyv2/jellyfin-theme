@@ -3,7 +3,7 @@
 A minimal and elegant theme for Jellyfin based on/inspired by [Ultrachromic](https://github.com/CTalvio/Ultrachromic), [Glassmorphism](https://github.com/alexyle/jellyfin-theme), [Scyfin](https://github.com/loof2736/scyfin), [JellyTheme](https://github.com/alexyle/jellyfin-theme) & [Zombie](https://github.com/MakD/zombie-release/tree/main).
 
 **Now with two login wallpaper options: minimal and stylish!**<br>
-Compatible with 10.9.10+ & Tablets!
+Compatible with 10.11+ & Tablets!
 
 ---
 
@@ -26,11 +26,24 @@ Two login wallpaper options: Minimal and Stylish.
 
 ## Installing
 
-To add the theme to Jellyfin, copy the following line to Dashboard > General > Custom CSS:
+To add the theme to Jellyfin `v10.11+`, copy the following line to Dashboard > Branding² > Custom CSS:
 
 ```
 @import url('https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@latest/theme.css');
 ```
+
+<br>
+
+<details>
+<summary>For older Jellyfin versions (v10.10), add the following line instead:</summary>
+
+Jellyfin `v10.10.x`:
+<br>
+```
+@import url('https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@legacy/v10.10/theme.css');
+```
+</details>
+
 Then, if you haven't already, enable Backdrops for _every_ device using this theme (Settings > Display > Backdrops).¹
 
 ## Color schemes
@@ -250,9 +263,11 @@ This is a comparison between the minimal(default) and stylish versions of the lo
 
 ### Notes:
 
- ¹ You must enable Backdrops on *every* device you plan to use this on, otherwise theme **WILL** look broken.
+ ¹ You *must* enable Backdrops on *every* device you plan to use this on, otherwise theme **WILL** look broken.
 
- This theme looks best with background images whose content is skewed the right. [As demonstrated here](./images/extras/bg-guide.jpg).
+ ² On Jellyfin versions below `v10.11` the custom CSS is located at Dashboard > _General_ > Custom CSS.
+
+ This theme looks best with background images whose content is skewed right. [As demonstrated here](./images/extras/bg-guide.jpg).
 
  I don't use the Live TV feature and neither Music Videos, so theme may look broken there. Not opposed to theming it, but hard to since I don't use it...
 
